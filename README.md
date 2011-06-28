@@ -1,0 +1,3 @@
+# Algorith::Soundex - The American Soundex algorithm in Perl 6
+
+Features coming soon...
