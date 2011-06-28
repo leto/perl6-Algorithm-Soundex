@@ -1,3 +1,5 @@
 # Algorith::Soundex - The American Soundex algorithm in Perl 6
 
-Features coming soon...
+## Running Tests
+
+    prove -e perl6 -r t/
