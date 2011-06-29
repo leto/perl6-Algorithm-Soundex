@@ -4,9 +4,26 @@ class Algorithm::Soundex {
 
     method soundex ($string --> Str ) {
         my $soundex = $string.substr(0,1).uc;
-
-        return $soundex;
-
+        gather {
+                take $soundex;
+                my $fakefirst = '';
+                $fakefirst = "de " if $soundex ~~ /^ <[AEIOUWH]> /;
+                "$fakefirst$string".lc.trans('wh' => '') ~~ /
+                    ^
+                    [
+                        [
+                        | <[ bfpv     ]>+ { take 1 }
+                        | <[ cgjkqsxz ]>+ { take 2 }
+                        | <[ dt       ]>+ { take 3 }
+                        | <[ l        ]>+ { take 4 }
+                        | <[ mn       ]>+ { take 5 }
+                        | <[ r        ]>+ { take 6 }
+                        ]
+                    || .
+                    ]+
+                    $ { take 0,0,0 }
+                /;
+            }.flat.[0,2,3,4].join;
     }
 
 }
