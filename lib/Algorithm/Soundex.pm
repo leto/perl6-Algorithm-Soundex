@@ -2,8 +2,8 @@ use v6;
 
 class Algorithm::Soundex {
 
-    method soundex (Str $string ) {
-        my $soundex = '';
+    method soundex ($string --> Str ) {
+        my $soundex = $string.substr(0,1).uc;
 
         return $soundex;
 
