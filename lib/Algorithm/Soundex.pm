@@ -2,6 +2,13 @@ use v6;
 
 class Algorithm::Soundex {
 
+    method soundex (Str $string ) {
+        my $soundex = '';
+
+        return $soundex;
+
+    }
+
 }
 =begin pod
 
