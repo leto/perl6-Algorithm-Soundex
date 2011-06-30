@@ -31,17 +31,25 @@ class Algorithm::Soundex {
 
 =head1 NAME
 
-Algorithm::Soundex - The Soundex Algorithm
+Algorithm::Soundex - Soundex Algorithms
 
 =head1 DESCRIPTION
 
-The very simple American Soundex algorithm, implemented in Perl 6.
+Currently this module contains the American Soundex algorithm, implemented in Perl 6.
+
+If you would like to add other Soundex algorithms, Patches Welcome! No, they are
+*actually* welcome :)
 
 =head1 SYNOPSIS
 
 =begin code
 
-INSERT CODE HERE
+    use v6;
+    use Algorithm::Soundex;
+
+    my Algorithm::Soundex $s .= new();
+    my $soundex               = $s.soundex("Leto");
+    say "The soundex of Leto is $soundex";
 
 =end code
 
