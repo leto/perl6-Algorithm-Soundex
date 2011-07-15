@@ -7,12 +7,11 @@ BEGIN { push @*INC, './lib'; }
 plan 3;
 
 use Algorithm::Soundex;
+pass("Loaded Algorithm::Soundex");
 
 my Algorithm::Soundex $s .= new();
 
 isa_ok($s, Algorithm::Soundex);
-
-pass("Loaded Algorithm::Soundex");
 
 my $soundex = $s.soundex("Robert");
 
