@@ -10,3 +10,7 @@
 ## Running Tests
 
     $ prove -e "perl6 -Ilib" -r t/
+
+## Contributing
+
+Patches welcome!
