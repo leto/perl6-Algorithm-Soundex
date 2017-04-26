@@ -1,15 +1,20 @@
 {
-    "perl"        : "6.*",
-    "name"        : "Algorithm::Soundex",
-    "version"     : "*",
-    "description" : "Soundex Algorithm in Perl 6",
-    "build-depends" : [ ],
-    "test-depends" : [
-        "Test"
-    ],
-    "depends" : [ ],
-    "provides" : {
-        "Algorithm::Soundex" : "lib/Algorithm/Soundex.pm"
-    },
-    "source-url"  : "git://github.com/leto/perl6-Algorithm-Soundex.git"
+  "name": "Algorithm::Soundex",
+  "source-url": "git://github.com/leto/perl6-Algorithm-Soundex.git",
+  "perl": "6.*",
+  "build-depends": [
+    
+  ],
+  "depends": [
+    
+  ],
+  "license": "Artistic-2.0",
+  "provides": {
+    "Algorithm::Soundex": "lib/Algorithm/Soundex.pm"
+  },
+  "test-depends": [
+    "Test"
+  ],
+  "version": "*",
+  "description": "Soundex Algorithm in Perl 6"
 }
